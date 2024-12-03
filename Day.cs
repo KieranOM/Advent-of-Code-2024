@@ -47,8 +47,8 @@ public abstract class Day
         }
     }
 
-    protected void Log(in string message)
+    protected void Log<T>(in T value)
     {
-        Console.WriteLine(LogPrefix + message);
+        Console.WriteLine(LogPrefix + value);
     }
 }
