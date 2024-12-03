@@ -4,7 +4,8 @@ internal static class Program
 {
     private static readonly Day[] Days =
     [
-        new Day1()
+        new Day1(),
+        new Day2(),
     ];
 
     public static void Main(string[] args)
