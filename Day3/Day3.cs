@@ -7,7 +7,7 @@ public partial class Day3 : Day
     public override int Number => 3;
 
     private readonly Regex _multiplicationPattern = MultiplicationRegex();
-    private readonly Regex _disabledPattern = DisabledPattern();
+    private readonly Regex _disabledPattern = DisabledRegex();
 
     protected override void Run(in string[] input)
     {
@@ -34,9 +34,9 @@ public partial class Day3 : Day
         return left * right;
     }
 
-    [GeneratedRegex(@"mul\((\d+),(\d+)\)", RegexOptions.Multiline)]
+    [GeneratedRegex(@"mul\((\d+),(\d+)\)")]
     private static partial Regex MultiplicationRegex();
 
-    [GeneratedRegex(@"don't\(\).*?do\(\)", RegexOptions.Multiline)]
-    private static partial Regex DisabledPattern();
+    [GeneratedRegex(@"don't\(\).*?do\(\)")]
+    private static partial Regex DisabledRegex();
 }
