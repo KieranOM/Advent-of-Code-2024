@@ -8,6 +8,7 @@ internal static class Program
         new Day2(),
         new Day3(),
         new Day4(),
+        new Day5(),
     ];
 
     public static void Main(string[] args)
