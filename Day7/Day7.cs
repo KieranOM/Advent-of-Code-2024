@@ -59,7 +59,9 @@ public class Day7 : Day
             {
                 Operator.Add => lhs + rhs,
                 Operator.Multiply => lhs * rhs,
-                Operator.Concatenate => long.Parse($"{lhs}{rhs}")
+                Operator.Concatenate => lhs * ShiftUnits(rhs) + rhs,
             };
+
+        private static long ShiftUnits(in long value) => (long)Math.Pow(10, 1 + Math.Floor(Math.Log10(value)));
     }
 }
