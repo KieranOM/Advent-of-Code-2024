@@ -13,7 +13,7 @@ internal static class Program
         new Day7(),
     ];
 
-    public static void Main(string[] args)
+    public static async Task Main(string[] args)
     {
         string input = GetDayNumberInput(args);
         if (!ValidateDayNumberInput(input, out int number))
@@ -29,7 +29,7 @@ internal static class Program
             return;
         }
 
-        day.Run();
+        await day.Run();
     }
 
     private static string GetDayNumberInput(in string[] args)
