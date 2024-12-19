@@ -18,6 +18,7 @@ internal static class Program
         new Day12(),
         new Day13(),
         new Day14(),
+        new Day15(),
     ];
 
     public static async Task Main(string[] args)
